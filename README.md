@@ -14,4 +14,4 @@ Currently working on adding an event handler to monitor for a ready check and th
 
 ## Instructions
 
-Download folder and place in your ...\World of Warcraft\Interface\AddOns location.
+Download files and place in a ...\World of Warcraft\Interface\AddOns\Intellect4Dummies folder.
