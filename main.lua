@@ -52,3 +52,9 @@ function CheckBuffsGroup()
 end
 
 -- Event handler
+local frame = CreateFrame("FRAME", "I4DFrame")
+frame:RegisterEvent("READY_CHECK")
+local function eventHandler(self, event, ...)
+  CheckBuffsGroup()
+end
+frame:SetScript("OnEvent", eventHandler)
