@@ -3,6 +3,5 @@
 ## Notes: Reminds you to cast Intellect if you are a dummy
 ## Version: 0.4
 ## Author: MStewGT
-## URL: http://www.jackofalladmins.com
 
 main.lua
