@@ -18,32 +18,34 @@ end
 function CheckBuffsGroup()
   local needBuff = false
   local aura = false
+  local buff = "Arcane Intellect"
+  local warnText = "Someone is Dumb!!"
   
   if IsInRaid() then
     for i=1, GetNumGroupMembers() do
-      aura = AuraUtil.FindAuraByName("Arcane Intellect", raidMembers[i])
+      aura = AuraUtil.FindAuraByName(buff, raidMembers[i])
       if not aura then
         needBuff = true
-        message("Someone is Dumb!!")
+        message(warnText)
         return needBuff
       end
     end
     
     elseif IsInGroup() then
       for i=1, GetNumSubgroupMembers() do
-        aura = AuraUtil.FindAuraByName("Arcane Intellect", partyMembers[i])
+        aura = AuraUtil.FindAuraByName(buff, partyMembers[i])
         if not aura then
           needBuff = true
-          message("Someone is Dumb!!")
+          message(warnText)
           return needBuff
         end
       end        
         
     else
-      aura = AuraUtil.FindAuraByName("Arcane Intellect", "player")
+      aura = AuraUtil.FindAuraByName(buff, "player")
       if not aura then
         needBuff = true
-        message("Someone is Dumb!!")
+        message(warnText)
         return needBuff
       end
         
