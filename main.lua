@@ -13,7 +13,6 @@ do
   end
 end
 
-
 -- Loop through raidMembers and check Spell Power aura for Arcane Intellect
 function CheckBuffsGroup()
   local needBuff = false

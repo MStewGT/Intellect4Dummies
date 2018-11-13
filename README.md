@@ -17,6 +17,8 @@ In the current version the check must be kicked off manually using the function.
 - [x] Move buff name and warning text to variables
 - [ ] Test event handler code
 - [ ] Test all possible raid/party/solo situations function as intended
+- [ ] Add sound effect
+- [ ] Generate a nicer warning message instead of default message box
 
 ## Instructions
 
