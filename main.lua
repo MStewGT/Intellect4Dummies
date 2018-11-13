@@ -13,16 +13,22 @@ do
   end
 end
 
--- Loop through raidMembers and check Spell Power aura for Arcane Intellect
+-- Loop through raidMembers and check Arcane Intellect buff/aura
 function CheckBuffsGroup()
+
+  -- Define local variables
   local needBuff = false
   local aura = false
   local buff = "Arcane Intellect"
   local warnText = "Someone is Dumb!!"
   
+  -- Check if in a raid first
   if IsInRaid() then
+    -- Loop through raid members
     for i=1, GetNumGroupMembers() do
+      -- Check for buff
       aura = AuraUtil.FindAuraByName(buff, raidMembers[i])
+      -- If buff is not present then warn
       if not aura then
         needBuff = true
         message(warnText)
@@ -30,18 +36,25 @@ function CheckBuffsGroup()
       end
     end
     
+    -- If not in a raid check if in a party
     elseif IsInGroup() then
+      -- Loop through party members
       for i=1, GetNumSubgroupMembers() do
+        -- Check for buff
         aura = AuraUtil.FindAuraByName(buff, partyMembers[i])
+        -- If buff is not present then warn
         if not aura then
           needBuff = true
           message(warnText)
           return needBuff
         end
       end        
-        
+    
+    -- If all else fails you must be solo, only usable via debugger
     else
+      -- Check for buff
       aura = AuraUtil.FindAuraByName(buff, "player")
+      -- If buff is not present then warn
       if not aura then
         needBuff = true
         message(warnText)
@@ -54,8 +67,8 @@ end
 
 -- Event handler
 local frame = CreateFrame("FRAME", "I4DFrame")
-frame:RegisterEvent("READY_CHECK")
+frame:RegisterEvent("READY_CHECK")  -- Listens for a Ready Check
 local function eventHandler(self, event, ...)
-  CheckBuffsGroup()
+  CheckBuffsGroup()  -- Runs buff check on event
 end
 frame:SetScript("OnEvent", eventHandler)
