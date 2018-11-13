@@ -1,7 +1,7 @@
 ## Interface: 80000
 ## Title: Intellect 4 Dummies
 ## Notes: Reminds you to cast Intellect if you are a dummy
-## Version: 0.4
+## Version: 1.0
 ## Author: MStewGT
 
 main.lua

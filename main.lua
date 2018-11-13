@@ -1,5 +1,6 @@
 -- Main Lua code for Intellect4Dummies
 -- Author: MStewGT
+-- Version: 1.0
 
 -- Returns a list of members in the player's party or raid and assigns to a variable
 raidMembers = {};

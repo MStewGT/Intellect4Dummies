@@ -4,7 +4,7 @@
 
 Author: MStewGT\
 Blog: [Jack of all Admins](http://www.jackofalladmins.com) (*Under Construction*)\
-Version: 0.4\
+Version: 1.0\
 Description: Simple addon to warn if a member of your party/raid does not have the Arcane Intellect buff
 
 ## Notes
