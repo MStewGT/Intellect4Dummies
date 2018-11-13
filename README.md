@@ -9,7 +9,7 @@ Description: Simple addon to warn if a member of your party/raid does not have t
 
 ## Notes
 
-In the current version the check must be kicked off manually using the function.\
+In the current version the check must be kicked off manually using the function.
 
 ## To Do
 
