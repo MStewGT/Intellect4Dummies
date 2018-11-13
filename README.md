@@ -14,7 +14,7 @@ In the current version the check must be kicked off manually using the function.
 ## To Do
 
 - [x] Add an event handler to monitor for a ready check and run buff check
-- [x] Move buff Name and warning text to variables
+- [x] Move buff name and warning text to variables
 - [ ] Test event handler code
 - [ ] Test all possible raid/party/solo situations function as intended
 
