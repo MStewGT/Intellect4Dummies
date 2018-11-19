@@ -18,7 +18,6 @@ end
 function CheckBuffsGroup()
 
   -- Define local variables
-  local needBuff = false
   local aura = false
   local buff = "Arcane Intellect"
   local warnText = "Someone is Dumb!!"
@@ -31,9 +30,8 @@ function CheckBuffsGroup()
       aura = AuraUtil.FindAuraByName(buff, raidMembers[i])
       -- If buff is not present then warn
       if not aura then
-        needBuff = true
         message(warnText)
-        return needBuff
+        return aura
       end
     end
     
@@ -45,9 +43,8 @@ function CheckBuffsGroup()
         aura = AuraUtil.FindAuraByName(buff, partyMembers[i])
         -- If buff is not present then warn
         if not aura then
-          needBuff = true
           message(warnText)
-          return needBuff
+          return aura
         end
       end        
     
@@ -57,9 +54,8 @@ function CheckBuffsGroup()
       aura = AuraUtil.FindAuraByName(buff, "player")
       -- If buff is not present then warn
       if not aura then
-        needBuff = true
         message(warnText)
-        return needBuff
+        return aura
       end
         
   end
