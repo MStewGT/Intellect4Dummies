@@ -21,7 +21,7 @@ function CheckBuffsGroup()
   local aura = false
   local buff = "Arcane Intellect"
   local warnText = "Someone is Dumb!!"
-  
+
   -- Check if in a raid first
   if IsInRaid() then
     -- Loop through raid members
@@ -34,7 +34,7 @@ function CheckBuffsGroup()
         return aura
       end
     end
-    
+
     -- If not in a raid check if in a party
     elseif IsInGroup() then
       -- Loop through party members
@@ -46,8 +46,8 @@ function CheckBuffsGroup()
           message(warnText)
           return aura
         end
-      end        
-    
+      eventHandler
+
     -- If all else fails you must be solo, only usable via debugger
     else
       -- Check for buff
@@ -57,9 +57,9 @@ function CheckBuffsGroup()
         message(warnText)
         return aura
       end
-        
+
   end
-    
+
 end
 
 -- Event handler

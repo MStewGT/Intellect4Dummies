@@ -9,7 +9,7 @@ Description: Simple addon to warn if a member of your party/raid does not have t
 
 ## Notes
 
-In the current version the check must be kicked off manually using the function.
+Addon will verify that all party/raid members have the Arcane Intellect buff when a Ready Check is started.
 
 ## To Do
 
@@ -24,7 +24,7 @@ In the current version the check must be kicked off manually using the function.
 
 Download files and place in a ...\World of Warcraft\Interface\AddOns\Intellect4Dummies folder.
 
-If you want to change the buff to check for or the warning message just edit the lines below in *main.lua*
+If you want to change the buff to check for, or the warning message, just edit the lines below in *main.lua*
 
 ```lua
 local buff = "Arcane Intellect"
