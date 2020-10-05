@@ -4,12 +4,13 @@
 
 Author: MStewGT\
 Blog: [Jack of all Admins](http://www.jackofalladmins.com)\
-Version: 1.1\
+Version: 1.2\
 Description: Simple addon to warn if a member of your party/raid does not have the Arcane Intellect buff
 
 ## Notes
 
-Addon will verify that all party/raid members have the Arcane Intellect buff when a Ready Check is started.
+Addon will verify that all party/raid members have the Arcane Intellect buff when a Ready Check is started.\
+Extensively raid tested, could use further testing in parties.
 
 ## To Do
 
@@ -19,6 +20,7 @@ Addon will verify that all party/raid members have the Arcane Intellect buff whe
 - [x] Test all possible raid/party/solo situations function as intended
 - [ ] Add sound effect
 - [ ] Generate a nicer warning message instead of default message box
+- [ ] Add the ability to configure the addon to check for other buffs
 
 ## Instructions
 
