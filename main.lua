@@ -1,6 +1,6 @@
 -- Main Lua code for Intellect4Dummies
 -- Author: MStewGT
--- Version: 1.0
+-- Version: 1.2
 
 -- Returns a list of members in the player's party or raid and assigns to a variable
 local raidMembers = {};
@@ -35,28 +35,28 @@ function CheckBuffsGroup()
       end
     end
 
-    -- If not in a raid check if in a party
-    elseif IsInGroup() then
-      -- Loop through party members
-      for i=1, GetNumSubgroupMembers() do
-        -- Check for buff
-        aura = AuraUtil.FindAuraByName(buff, partyMembers[i])
-        -- If buff is not present then warn
-        if not aura then
-          message(warnText)
-          return aura
-        end
-      eventHandler
-
-    -- If all else fails you must be solo, only usable via debugger
-    else
+  -- If not in a raid check if in a party
+  elseif IsInGroup() then
+    -- Loop through party members
+    for i=1, GetNumSubgroupMembers() do
       -- Check for buff
-      aura = AuraUtil.FindAuraByName(buff, "player")
+      aura = AuraUtil.FindAuraByName(buff, partyMembers[i])
       -- If buff is not present then warn
       if not aura then
         message(warnText)
         return aura
       end
+    end
+
+  -- If all else fails you must be solo, only usable via debugger
+  else
+    -- Check for buff
+    aura = AuraUtil.FindAuraByName(buff, "player")
+    -- If buff is not present then warn
+    if not aura then
+      message(warnText)
+      return aura
+    end
 
   end
 
