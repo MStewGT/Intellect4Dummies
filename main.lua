@@ -1,6 +1,6 @@
 -- Main Lua code for Intellect4Dummies
 -- Author: MStewGT
--- Version: 1.2
+-- Version: 1.3
 
 -- Returns a list of members in the player's party or raid and assigns to a variable
 local raidMembers = {};
@@ -21,6 +21,7 @@ function CheckBuffsGroup()
   local aura = false
   local buff = "Arcane Intellect"
   local warnText = "Someone is Dumb!!"
+  local soundFile = "12867"
 
   -- Check if in a raid first
   if IsInRaid() then
@@ -31,6 +32,7 @@ function CheckBuffsGroup()
       -- If buff is not present then warn
       if not aura then
         message(warnText)
+        PlaySound(soundFile)
         return aura
       end
     end
@@ -44,6 +46,7 @@ function CheckBuffsGroup()
       -- If buff is not present then warn
       if not aura then
         message(warnText)
+        PlaySound(soundFile)
         return aura
       end
     end
@@ -55,6 +58,7 @@ function CheckBuffsGroup()
     -- If buff is not present then warn
     if not aura then
       message(warnText)
+      PlaySound(soundFile)
       return aura
     end
 
