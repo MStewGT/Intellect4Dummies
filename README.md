@@ -4,7 +4,7 @@
 
 Author: MStewGT\
 Blog: [Jack of all Admins](http://www.jackofalladmins.com)\
-Version: 1.2\
+Version: 1.3\
 Description: Simple addon to warn if a member of your party/raid does not have the Arcane Intellect buff
 
 ## Notes
@@ -18,7 +18,7 @@ Extensively raid tested, could use further testing in parties.
 - [x] Move buff name and warning text to variables
 - [x] Test event handler code
 - [x] Test all possible raid/party/solo situations function as intended
-- [ ] Add sound effect
+- [x] Add sound effect
 - [ ] Generate a nicer warning message instead of default message box
 - [ ] Add the ability to configure the addon to check for other buffs
 
